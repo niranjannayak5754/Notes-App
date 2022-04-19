@@ -6,11 +6,11 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 // Annotates class to be a Room Database with a table (entity) of the Notes class
-@Database(entities = arrayOf(Notes::class), version = 1, exportSchema = false)
+@Database(entities = [Notes::class], version = 1, exportSchema = false)
 
 public abstract class NotesDatabase: RoomDatabase(){
 
-    abstract fun notesDAO():NotesDAO
+    abstract fun getNotesDAO():NotesDAO
 
     companion object {
         // Singleton prevents multiple instances of database opening at the
