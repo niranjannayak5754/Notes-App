@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 // Annotates class to be a Room Database with a table (entity) of the Notes class
 @Database(entities = [Notes::class], version = 1, exportSchema = false)
 
-public abstract class NotesDatabase: RoomDatabase(){
+abstract class NotesDatabase: RoomDatabase(){
 
     abstract fun getNotesDAO():NotesDAO
 
